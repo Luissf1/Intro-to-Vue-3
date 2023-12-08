@@ -12,7 +12,7 @@
 
 <body>
   <div id="app">
-    <div class="nav-bar"></div>
+    <div class="nav-hebar"></div>
 
     <div class="cart">Cart({{ cart }})</div>
 
@@ -31,7 +31,9 @@
           <div v-for="variant in variants" :key="variant.id" @mouseover="updateImage(variant.image)"
             class="color-circle" :style="{backgroundColor:variant.color}">
           </div>
-          <button class="button" v-on:click="addToCart">Add to Cart</button>
+          <button class="button" 
+          :class="{disabledButton:!=inStock}" 
+          :disable="!inStock" v-on:click="addToCart">Add to Cart</button>
           <!-- solution -->
           <button class="button" @click="removeFromCart">Remove Item</button>
           <!-- solution -->
