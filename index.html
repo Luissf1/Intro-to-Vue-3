@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<<<<<<< Updated upstream
 <head>
   <meta charset="UTF-8" />
   <title>Vue Mastery</title>
@@ -9,6 +10,22 @@
   <!-- Import Vue.js -->
   <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
 </head>
+=======
+      <div class="cart">Cart({{ cart }})</div>
+      
+      <div class="product-display">
+        <div class="product-container">
+          <div class="product-image">
+            <img v-bind:src="image">
+          </div>
+          <div class="product-info">
+            <h1>{{brand + " "+ product }}</h1>
+            <p v-if="inStock">In Stock</p>
+            <p v-else>Out of Stock</p>
+            <ul>
+              <li v-for="detail in details">{{ detail }}</li>
+            </ul>
+>>>>>>> Stashed changes
 
 <body>
   <div id="app">
